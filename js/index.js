@@ -31,3 +31,17 @@ window.addEventListener("scroll", () => {
     navigation.classList.remove("fix-nav");
   }
 });
+
+// PopUp
+const popup = document.querySelector(".popup");
+const closePopup = document.querySelector(".popup-close");
+
+closePopup.addEventListener("click", () => {
+  popup.classList.remove("show");
+});
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    popup.classList.add("show");
+  }, 3000);
+});
